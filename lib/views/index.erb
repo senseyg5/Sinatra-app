@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+    <style>
+      body{
+        width: 100%;
+      }
+      table{
+        width: 80%;
+        border: 2px solid #000;
+        border-collapse: collapse;
+        margin: auto;
+      }
+      thead, td, th{
+        border: 2px solid #000;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+      <h2>Liste des Gossips</h2>
+     <table>
+          <thead>
+            <th>Index</th>
+            <th>Auteur</th>
+            <th>Contenu</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+          </thead>
+          <% gossips.each_with_index do |gossip,index| %><!-- On boucle sur le tableau de gossip et on les-->
+          <tbody>
+
+            <tr>
+              <td><%= index %></td>
+              <td><%= gossip.author %></td>
+              <td><%= gossip.content %></td>
+              <td><a href='/gossips/<%= index %>/edit'>Modifier</a></td>
+              <td><a href="">Supprimer</a></td>
+              
+            </tr>
+          </tbody>
+          <% end %>
+      </table>
+    
+    <form action='/gossips/new' method='POST'><!-- Formulaire nouveau Gossip-->
+      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
+      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+
+  </body>
+</html>
