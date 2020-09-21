@@ -17,20 +17,11 @@ Pour lancer le projet, il faut tout d'abord installer le **gem** necessaire, pou
 Apres, tapez dans la console, 
 > $ rackup -p 4567
 <br>
-Le serveur se lance, il demande a l'utilisateur de faire le choix, si l'user choisi:
+Apres, ouvre le navigateur et tapez 
+> localhost:4567
 
-> 1- Creation du gossip
+Le serveur se lance, la page se redirige vers la page index
+> 1- Afficher la liste de gossip
+et
+> 2- Creation du gossip
 
-Le programme demande le nom et la description du gossip
-
-> 2- Afficher la liste de gossip
-
-Le programme affichera les listes de gossipes stocker dans le fichier **gossip.csv** qui est dans le dossier **db**
-
-> 3- Suppression de gossip
-
-Le programme supprime le gossip selectionner
-
-> 4- Quitter l'app
-
-Le programme quittera l'aplication
